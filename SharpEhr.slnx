@@ -11,7 +11,9 @@
   <Folder Name="/src/Rm/Common/">
     <Project Path="src/Rm/Common/Rm.Common/Rm.Common.csproj" />
   </Folder>
-  <Folder Name="/src/Rm/DataStructures/" />
+  <Folder Name="/src/Rm/DataStructures/">
+    <Project Path="src/Rm/DataStructures/Rm.DataStructures/Rm.DataStructures.csproj" />
+  </Folder>
   <Folder Name="/src/Rm/DataTypes/">
     <Project Path="src/Rm/DataTypes/Rm.DataTypes/Rm.DataTypes.csproj" />
   </Folder>

@@ -26,7 +26,7 @@ public class Link
     /// 2 under the categories of generic , documenting and reporting , organisational , clinical , circumstancial , 
     /// and view management .
     /// </summary>
-    public required DV_Text Meaning { get; set; }
+    public required DV_TEXT Meaning { get; set; }
 
     /// <summary>
     /// The type attribute is used to indicate a clinical or domain - level meaning for the kind of link, for example 
@@ -34,7 +34,7 @@ public class Link
     /// to categorise links which must be followed and which can be broken when the extract is created.
     /// </summary>
 
-    public required DV_Text Type {  get; set; }
+    public required DV_TEXT Type { get; set; }
     /// <summary>
     /// The logical to object in the link relation, as per the linguistic sense of the meaning attribute.
     /// </summary>

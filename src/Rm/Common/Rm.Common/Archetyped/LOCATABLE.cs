@@ -8,7 +8,7 @@ namespace Rm.Common.Archetyped;
 /// which defines the idea of locatability in an archetyped structure. LOCATABLE
 /// defines a runtime name and an archetype_node_id.
 /// </summary>
-public abstract class LOCATABLE : Pathable
+public abstract class LOCATABLE : PATHABLE
 {
     /// <summary>
     /// Runtime name of this fragment, used to build runtime paths.This is the term 
@@ -16,7 +16,7 @@ public abstract class LOCATABLE : Pathable
     /// construct: its retention in the EHR faithfully preserves the original 
     /// label by which this entry was known to end users.
     /// </summary>
-    public required DV_Text Name { get; set; }
+    public required DV_TEXT Name { get; set; }
 
     /// <summary>
     /// Design-time archetype identifier of this node taken from its generating archetype; 
@@ -34,7 +34,7 @@ public abstract class LOCATABLE : Pathable
     /// Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the root node)
     /// </summary>
     /// <returns></returns>
-    public abstract DV_Text Concept();
+    public abstract DV_TEXT Concept();
 
     /// <summary>
     /// True if this node is the root of an archetyped structure.

@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Base\BaseTypes\Base.BaseTypes\Base.BaseTypes.csproj" />
     <ProjectReference Include="..\..\Common\Rm.Common\Rm.Common.csproj" />
-    <ProjectReference Include="..\..\DataStructures\Rm.DataStructures\Rm.DataStructures.csproj" />
     <ProjectReference Include="..\..\DataTypes\Rm.DataTypes\Rm.DataTypes.csproj" />
   </ItemGroup>
 

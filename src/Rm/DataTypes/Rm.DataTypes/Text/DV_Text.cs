@@ -12,7 +12,7 @@
 ///
 /// A DV_TEXT can be coded by adding mappings to it.
 /// </summary>
-public class DV_Text
+public class DV_TEXT
 {
     /// <summary>
     /// Displayable rendition of the item, regardless of its underlying structure. For DV_CODED_TEXT, this is the rubric of the complete term as provided by the terminology service.

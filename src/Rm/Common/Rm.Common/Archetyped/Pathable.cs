@@ -3,13 +3,13 @@ namespace Rm.Common.Archetyped;
 /// <summary>
 /// Pathable can locate child objects using paths and know their parent object in a compositional hierarchy.
 /// </summary>
-public abstract class Pathable
+public abstract class PATHABLE
 {
     /// <summary>
     /// Get the parent of this object
     /// </summary>
     /// <returns>A parent (if any exists)</returns>
-    public abstract Pathable? Parent();
+    public abstract PATHABLE? Parent();
     
     /// <summary>
     /// Returns the child item at a path
@@ -37,5 +37,5 @@ public abstract class Pathable
     /// </summary>
     /// <param name="locatable"></param>
     /// <returns>The path of the object (if it is a child of the current object)</returns>
-    public abstract string? PathOfItem(Pathable locatable);
+    public abstract string? PathOfItem(PATHABLE locatable);
 }
