@@ -1,0 +1,29 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="docfx.json" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Base/" />
+  <Folder Name="/src/Base/BaseTypes/">
+    <Project Path="src/Base/BaseTypes/Base.BaseTypes.Builtins/Base.BaseTypes.Builtins.csproj" />
+    <Project Path="src/Base/BaseTypes/Base.BaseTypes.Definitions/Base.BaseTypes.Definitions.csproj" />
+    <Project Path="src/Base/BaseTypes/Base.BaseTypes.Identification/Base.BaseTypes.Identification.csproj" />
+    <Project Path="src/Base/BaseTypes/Base.BaseTypes/Base.BaseTypes.csproj" />
+  </Folder>
+  <Folder Name="/src/Rm/" />
+  <Folder Name="/src/Rm/Common/">
+    <Project Path="src/Rm/Common/Rm.Common.Archetyped/Rm.Common.Archetyped.csproj" />
+    <Project Path="src/Rm/Common/Rm.Common/Rm.Common.csproj" />
+  </Folder>
+  <Folder Name="/src/Rm/DataStructures/" />
+  <Folder Name="/src/Rm/DataTypes/">
+    <Project Path="src/Rm/DataTypes/Rm.DataTypes.Basic/Rm.DataTypes.Basic.csproj" />
+    <Project Path="src/Rm/DataTypes/Rm.DataTypes.Text/Rm.DataTypes.Text.csproj" />
+    <Project Path="src/Rm/DataTypes/Rm.DataTypes/Rm.DataTypes.csproj" />
+  </Folder>
+  <Folder Name="/src/Rm/Demographics/" />
+  <Folder Name="/src/Rm/Ehr/" />
+  <Folder Name="/src/Rm/EhrExtract/" />
+  <Folder Name="/src/Rm/Integration/" />
+  <Folder Name="/src/Rm/Support/" />
+</Solution>
