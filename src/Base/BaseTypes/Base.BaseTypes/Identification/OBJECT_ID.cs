@@ -1,9 +1,4 @@
-﻿using System.ComponentModel;
-using System.Runtime.Intrinsics.X86;
-using System.Security.Cryptography;
-using System.Security.Principal;
-
-namespace Base.BaseTypes.Identification;
+﻿namespace Base.BaseTypes.Identification;
 
 /// <summary>
 /// Ancestor class of identifiers of informational objects. Ids may be completely meaningless, 
@@ -14,7 +9,10 @@ namespace Base.BaseTypes.Identification;
 /// in another service, use an OBJECT_REF, or else use a UID for local objects identified 
 /// by UID.If none of the subtypes is suitable, direct instances of this class may be used.
 /// </summary>
-public abstract class ObjectId
+public abstract class OBJECT_ID
 {
+    /// <summary>
+    /// The value of the id in the form defined below.
+    /// </summary>
     public required string Value { get; set; }
 }

@@ -2,11 +2,10 @@
 
 /// <summary>
 /// Identifier for archetypes. Ideally these would identify globally unique archetypes.
-
 /// 
 /// Lexical form: rm_originator '-' rm_name '-' rm_entity '.' concept_name { '-' specialisation }* '.v' number.
 /// </summary>
-public class ArchetypeId : ObjectId
+public class ARCHETYPE_ID : OBJECT_ID
 {
 
     /// <summary>

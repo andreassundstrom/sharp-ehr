@@ -1,14 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\Rm.Common.Archetyped\Rm.Common.Archetyped.csproj" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Base\BaseTypes\Base.BaseTypes\Base.BaseTypes.csproj" />
+    <ProjectReference Include="..\..\DataTypes\Rm.DataTypes\Rm.DataTypes.csproj" />
+  </ItemGroup>
 
 </Project>

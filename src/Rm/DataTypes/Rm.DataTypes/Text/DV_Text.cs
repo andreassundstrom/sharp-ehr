@@ -14,5 +14,8 @@
 /// </summary>
 public class DV_Text
 {
+    /// <summary>
+    /// Displayable rendition of the item, regardless of its underlying structure. For DV_CODED_TEXT, this is the rubric of the complete term as provided by the terminology service.
+    /// </summary>
     public required string Value { get; set; }
 }

@@ -12,5 +12,8 @@ namespace Rm.Common.Archetyped;
 /// </summary>
 public class Archetyped
 {
-    public required ArchetypeId ArchetypeId { get; set; }
+    /// <summary>
+    /// Globally unique archetype identifier.
+    /// </summary>
+    public required ARCHETYPE_ID ArchetypeId { get; set; }
 }

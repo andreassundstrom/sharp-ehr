@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Composition\Content\Navigation\" />
+    <Folder Include="Composition\Content\Entry\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\Base\BaseTypes\Base.BaseTypes\Base.BaseTypes.csproj" />
+    <ProjectReference Include="..\..\Common\Rm.Common\Rm.Common.csproj" />
     <ProjectReference Include="..\..\DataTypes\Rm.DataTypes\Rm.DataTypes.csproj" />
   </ItemGroup>
 

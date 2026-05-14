@@ -8,7 +8,7 @@ namespace Rm.Common.Archetyped;
 /// which defines the idea of locatability in an archetyped structure. LOCATABLE
 /// defines a runtime name and an archetype_node_id.
 /// </summary>
-public abstract class Locatable : Pathable
+public abstract class LOCATABLE : Pathable
 {
     /// <summary>
     /// Runtime name of this fragment, used to build runtime paths.This is the term 
