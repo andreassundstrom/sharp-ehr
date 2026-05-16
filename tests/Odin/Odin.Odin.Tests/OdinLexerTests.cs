@@ -1,6 +1,6 @@
 ﻿namespace Odin.Odin.Tests;
 
-public class OdinDocumentTests
+public class OdinLexerTests
 {
     /// <summary>
     /// Document without proper identifier, similar to anonymous object document
@@ -8,49 +8,38 @@ public class OdinDocumentTests
     [Fact]
     public void ImplicitObjectDocument_IsParsed()
     {
-        const string ImplicitObjectDocument = @"
-        attr_1 = <""Some value"">
-        ";
-
         var expectedTokens = new List<OdinToken>
         {
             new OdinToken(TokenType.Identifier, "attr_1"),
             new OdinToken(TokenType.Equal, "="),
-            new OdinToken(TokenType.LessThan, "<"),
+            new OdinToken(TokenType.OpenBlock, "<"),
             new OdinToken(TokenType.String, "Some value"),
-            new OdinToken(TokenType.GreaterThan, ">")
+            new OdinToken(TokenType.CloseBlock, ">")
         };
 
-        var actualTokens = OdinLexer.Tokenize(ImplicitObjectDocument);
-
+        var actualTokens = OdinLexer.Tokenize(OdinFixtures.ImplicitObjectDocument);
         Assert.Equivalent(expectedTokens, actualTokens);
     }
 
     [Fact]
     public void AnonymousObjectDocument_IsParsed()
     {
-        const string AnonymousObjectDocument = @"
-    <
-        attr_1 = <
-            attr_2 = <""Some value"">
-        >
-    >
-    ";
+
 
         var expectedTokens = new List<OdinToken>
         {
-            new OdinToken(TokenType.LessThan,"<"),
+            new OdinToken(TokenType.OpenBlock,"<"),
             new OdinToken(TokenType.Identifier,"attr_1"),
             new OdinToken(TokenType.Equal,"="),
-            new OdinToken(TokenType.LessThan,"<"),
+            new OdinToken(TokenType.OpenBlock,"<"),
             new OdinToken(TokenType.Identifier,"attr_2"),
             new OdinToken(TokenType.Equal,"="),
-            new OdinToken(TokenType.LessThan,"<"),
+            new OdinToken(TokenType.OpenBlock,"<"),
             new OdinToken(TokenType.String,"Some value"),
-            new OdinToken(TokenType.GreaterThan,">"),
+            new OdinToken(TokenType.CloseBlock,">"),
         };
 
-        var actualTokens = OdinLexer.Tokenize(AnonymousObjectDocument);
+        var actualTokens = OdinLexer.Tokenize(OdinFixtures.AnonymousObjectDocument);
 
         Assert.Equivalent(expectedTokens, actualTokens);
     }
@@ -58,33 +47,26 @@ public class OdinDocumentTests
     [Fact]
     public void IdentifiedObjectDocument_IsParsed()
     {
-        const string IdentifiedObjectDocument = @"
-        [""id_1""] = <
-            attr_1 = <
-                attr_12 = <""leaf_value"">
-            >
-        >";
-
         var expectedTokens = new List<OdinToken>
         {
-            new OdinToken(TokenType.OpenBracket,"["),
+            new OdinToken(TokenType.OpenContainer,"["),
             new OdinToken(TokenType.String,"id_1"),
-            new OdinToken(TokenType.CloseBracket,"]"),
+            new OdinToken(TokenType.CloseContainer,"]"),
             new OdinToken(TokenType.Equal,"="),
-            new OdinToken(TokenType.LessThan,"<"),
+            new OdinToken(TokenType.OpenBlock,"<"),
             new OdinToken(TokenType.Identifier,"attr_1"),
             new OdinToken(TokenType.Equal,"="),
-            new OdinToken(TokenType.LessThan,"<"),
+            new OdinToken(TokenType.OpenBlock,"<"),
             new OdinToken(TokenType.Identifier,"attr_12"),
             new OdinToken(TokenType.Equal,"="),
-            new OdinToken(TokenType.LessThan,"<"),
+            new OdinToken(TokenType.OpenBlock,"<"),
             new OdinToken(TokenType.String,"leaf_value"),
-            new OdinToken(TokenType.GreaterThan,">"),
-            new OdinToken(TokenType.GreaterThan,">"),
-            new OdinToken(TokenType.GreaterThan,">"),
+            new OdinToken(TokenType.CloseBlock,">"),
+            new OdinToken(TokenType.CloseBlock,">"),
+            new OdinToken(TokenType.CloseBlock,">"),
         };
 
-        var actualTokens = OdinLexer.Tokenize(IdentifiedObjectDocument);
+        var actualTokens = OdinLexer.Tokenize(OdinFixtures.IdentifiedObjectDocument);
 
         Assert.Equivalent(expectedTokens, actualTokens);
     }

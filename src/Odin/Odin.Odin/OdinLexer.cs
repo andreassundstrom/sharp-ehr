@@ -5,11 +5,11 @@ public enum TokenType
     /// <summary>
     /// The symbol <, open an object block
     /// </summary>
-    LessThan,
+    OpenBlock,
     /// <summary>
     /// The symbol >, close an object block
     /// </summary>
-    GreaterThan,
+    CloseBlock,
     /// <summary>
     /// The symbol =, indicate attribute value = object block
     /// </summary>
@@ -17,11 +17,11 @@ public enum TokenType
     /// <summary>
     /// The symbol (, type name or plug-in syntax type delimiters
     /// </summary>
-    LeftParenthesis,
+    OpenType,
     /// <summary>
     /// The symbol ), type name or plug-in syntax type delimiters
     /// </summary>
-    RightParenthesis,
+    CloseType,
     /// <summary>
     /// The symbols <#, open an object block expressed in a plug-in syntax
     /// </summary>
@@ -45,15 +45,19 @@ public enum TokenType
     /// <summary>
     /// The symbol [, used to delimit start of coded term
     /// </summary>
-    OpenBracket,
+    OpenContainer,
     /// <summary>
     /// The symbol ], used to delimit end of code term
     /// </summary>
-    CloseBracket,
+    CloseContainer,
     /// <summary>
     /// A string value
     /// </summary>
     String,
+    /// <summary>
+    /// A number value
+    /// </summary>
+    Number,
     /// <summary>
     /// Identifier for a block
     /// </summary>
@@ -94,11 +98,11 @@ public class OdinLexer
             switch (ch)
             {
                 case '<':
-                    tokens.Add(new OdinToken(TokenType.LessThan, "<"));
+                    tokens.Add(new OdinToken(TokenType.OpenBlock, "<"));
                     i++;
                     continue;
                 case '>':
-                    tokens.Add(new OdinToken(TokenType.GreaterThan, ">"));
+                    tokens.Add(new OdinToken(TokenType.CloseBlock, ">"));
                     i++;
                     continue;
                 case '=':
@@ -106,11 +110,11 @@ public class OdinLexer
                     i++;
                     continue;
                 case '[':
-                    tokens.Add(new OdinToken(TokenType.OpenBracket, "["));
+                    tokens.Add(new OdinToken(TokenType.OpenContainer, "["));
                     i++;
                     continue;
                 case ']':
-                    tokens.Add(new OdinToken(TokenType.CloseBracket, "]"));
+                    tokens.Add(new OdinToken(TokenType.CloseContainer, "]"));
                     i++;
                     continue;
                 case '"':
