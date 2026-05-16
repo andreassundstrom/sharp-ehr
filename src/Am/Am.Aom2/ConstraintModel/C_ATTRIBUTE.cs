@@ -23,13 +23,15 @@ public class C_ATTRIBUTE : ARCHETYPE_CONSTRAINT
 
 
     /// <summary>
-    /// Child C_OBJECT nodes.Each such node represents a constraint on the type of this attribute in its reference model.Multiples occur both for multiple items in the case of container attributes, and alternatives in the case of singular attributes.
+    /// Child C_OBJECT nodes.Each such node represents a constraint on the type of this attribute in its reference model.Multiples occur both for 
+    /// multiple items in the case of container attributes, and alternatives in the case of singular attributes.
     /// </summary>
     public List<C_OBJECT>? children { get; set; }
 
 
     /// <summary>
-    /// Path to the parent object of this attribute(i.e.doesn’t include the name of this attribute). Used only for attributes in differential form, specialised archetypes.Enables only the re-defined parts of a specialised archetype to be expressed, at the path where they occur.
+    /// Path to the parent object of this attribute(i.e.doesn’t include the name of this attribute). Used only for attributes in differential form,
+    /// specialised archetypes.Enables only the re-defined parts of a specialised archetype to be expressed, at the path where they occur.
     /// </summary>
     public string? differential_path { get; set; }
 

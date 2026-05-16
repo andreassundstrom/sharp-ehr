@@ -10,6 +10,9 @@
   <Folder Name="/src/Base/BaseTypes/">
     <Project Path="src/Base/BaseTypes/Base.BaseTypes/Base.BaseTypes.csproj" />
   </Folder>
+  <Folder Name="/src/Odin/">
+    <Project Path="src/Odin/Odin.Odin/Odin.Odin.csproj" />
+  </Folder>
   <Folder Name="/src/Rm/" />
   <Folder Name="/src/Rm/Common/">
     <Project Path="src/Rm/Common/Rm.Common/Rm.Common.csproj" />
@@ -27,4 +30,8 @@
   <Folder Name="/src/Rm/EhrExtract/" />
   <Folder Name="/src/Rm/Integration/" />
   <Folder Name="/src/Rm/Support/" />
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/Odin/">
+    <Project Path="tests/Odin/Odin.Odin.Tests/Odin.Odin.Tests.csproj" />
+  </Folder>
 </Solution>
