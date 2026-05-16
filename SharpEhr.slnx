@@ -3,6 +3,9 @@
     <File Path="docfx.json" />
   </Folder>
   <Folder Name="/src/" />
+  <Folder Name="/src/Am/">
+    <Project Path="src/Am/Am.Aom2/Am.Aom2.csproj" />
+  </Folder>
   <Folder Name="/src/Base/" />
   <Folder Name="/src/Base/BaseTypes/">
     <Project Path="src/Base/BaseTypes/Base.BaseTypes/Base.BaseTypes.csproj" />
